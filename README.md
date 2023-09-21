@@ -1,7 +1,7 @@
 # ChatMention
 A plugin for Minecraft that alerts a player to when their name is mentioned in chat along with a customisable sound and message.
 
-```yaml
+```yml
 mention:
   color: '&e'
   sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
