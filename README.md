@@ -8,4 +8,4 @@ mention:
   alert: '&aYou have been mentioned in chat by &d%player%&a!'
 ```
 
-![Imgur Image](https://i.imgur.com/zOv53I9.png)
+![Imgur Image](https://prnt.sc/D1VfpnEwHuxk)
