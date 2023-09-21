@@ -1,0 +1,4 @@
+name: ChatMention
+version: '${project.version}'
+main: tech.markxhewson.chatmention.ChatMention
+api-version: '1.20'

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ChatMention:jar">
+    <output-path>$USER_HOME$/Desktop/dev/plugins</output-path>
+    <root id="archive" name="ChatMention.jar">
+      <element id="module-output" name="ChatMention" />
+    </root>
+  </artifact>
+</component>

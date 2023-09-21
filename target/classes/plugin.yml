@@ -1,0 +1,4 @@
+name: ChatMention
+version: '1.0-SNAPSHOT'
+main: tech.markxhewson.chatmention.ChatMention
+api-version: '1.20'
