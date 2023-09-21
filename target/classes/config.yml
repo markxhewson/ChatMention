@@ -1,4 +1,0 @@
-mention:
-  color: '&e'
-  sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
-  alert: '&aYou have been mentioned in chat by &d%player%&a!'
