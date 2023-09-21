@@ -24,9 +24,7 @@ public final class ChatMention extends JavaPlugin {
     }
 
     @Override
-    public void onDisable() {
-
-    }
+    public void onDisable() {}
 
     public void initListeners() {
         Arrays.asList(
