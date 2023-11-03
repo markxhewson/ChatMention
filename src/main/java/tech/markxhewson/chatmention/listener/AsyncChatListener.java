@@ -29,19 +29,17 @@ public class AsyncChatListener implements Listener {
         String[] messageParts = event.getMessage().split(" ");
         String playerMentioned = findMentionedPlayer(messageParts);
 
-        event.setCancelled(true);
-
-        if (playerMentioned != null) {
-            Player mentionedPlayer = plugin.getServer().getPlayer(playerMentioned);
-
-            if (mentionedPlayer != null && !mentionedPlayer.getName().equals(event.getPlayer().getName())) {
-                processMention(event, mentionedPlayer, playerMentioned);
-                return;
-            }
+        if (playerMentioned == null || playerMentioned.equals(event.getPlayer().getName())) {
+            return;
         }
 
-        // If no player is mentioned, send the default message
-        sendDefaultMessage(event);
+        event.setCancelled(true);
+        Player mentionedPlayer = plugin.getServer().getPlayer(playerMentioned);
+
+        if (mentionedPlayer != null) {
+            processMention(event, mentionedPlayer, playerMentioned);
+        }
+
     }
 
     private void processMention(AsyncPlayerChatEvent event, Player mentionedPlayer, String originalName) {
@@ -53,13 +51,6 @@ public class AsyncChatListener implements Listener {
                 mentionedPlayer.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(CC.translate(MENTION_ALERT.replace("%player%", event.getPlayer().getName()))));
                 playMentionSound(mentionedPlayer);
             }
-        }
-    }
-
-    private void sendDefaultMessage(AsyncPlayerChatEvent event) {
-        for (Player recipient : event.getRecipients()) {
-            String formattedMessage = formatMessage(event, recipient, null, "");
-            recipient.sendMessage(formattedMessage);
         }
     }
 

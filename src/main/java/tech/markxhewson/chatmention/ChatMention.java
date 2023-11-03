@@ -20,7 +20,9 @@ public final class ChatMention extends JavaPlugin {
 
         playerCache = new PlayerCache(this);
 
-        getServer().getOnlinePlayers().forEach(player -> playerCache.addPlayer(player.getName()));
+        getServer().getOnlinePlayers().forEach(player -> {
+            playerCache.addPlayer(player.getName());
+        });
     }
 
     @Override

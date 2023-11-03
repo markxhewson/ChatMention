@@ -1,4 +1,4 @@
 mention:
-  color: '&e'
+  color: '#FFA500'
   sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
-  alert: '&aYou have been mentioned in chat by &d%player%&a!'
+  alert: '#023020You have been mentioned in chat by #FFC0CB%player%#023020!'
